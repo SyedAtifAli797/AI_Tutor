@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutor.ai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <img src="bot_image.png" alt="icon"
+          height="80" />
+      </li>
+      <li>
+        <h1>Techie.ai</h1>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="container">
+      <div class="text-box">
+        <span class="text" id="typing-text"></span>
+      </div>
+    </div>
+
+
+    <script>
+      const text = `Welcome to Techie.ai — your intelligent learning assistant designed to guide and empower learners in the fields of Machine Learning, Deep Learning, and Artificial Intelligence.
+
+Click the button at the bottom right to begin your journey.`;
+      const typingText = document.getElementById("typing-text");
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          typingText.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, 25); // typing speed
+        } else {
+          setTimeout(() => {
+            typingText.innerHTML = '';
+            index = 0;
+            type(); // restart
+          }, 800); // wait 2 seconds before restarting
+        }
+      }
+
+      type();
+    </script>
+
+<script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/04/09/08/20250409085359-L1N7PVY2.js"></script>
+    
+
+
+
+  </section>
+</body>
+
+</html>
