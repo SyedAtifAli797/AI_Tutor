@@ -40,13 +40,13 @@ Click the button at the bottom right to begin your journey.`;
         if (index < text.length) {
           typingText.innerHTML += text.charAt(index);
           index++;
-          setTimeout(type, 25); // typing speed
+          setTimeout(type, 25);
         } else {
           setTimeout(() => {
             typingText.innerHTML = '';
             index = 0;
-            type(); // restart
-          }, 800); // wait 2 seconds before restarting
+            type(); 
+          }, 800); 
         }
       }
 
